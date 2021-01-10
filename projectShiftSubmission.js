@@ -34,7 +34,17 @@ const findFrequency = function(array) {
 };
 
 const isPalindrome = function(str) {
-  // your code here - don't forget to return a boolean!
+  stringArray = str.split('');
+  reverseArray = []
+  for (let i = 0; i < str.length; i++){
+    reverseArray.push(stringArray.pop());
+  }
+  reverseWord = reverseArray.join('');
+  if (reverseWord === str){
+    return true;
+  } else {
+    return false
+  }
 };
 
 const largestPair = function(array) {
