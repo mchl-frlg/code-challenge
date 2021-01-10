@@ -70,5 +70,40 @@ const removeParenth = function(str) {
 };
 
 const scoreScrabble = function(str) {
-  // your code here - don't forget to return a number!
+  scoreCounter= 0;
+  for (let i = 0; i < str.length; i++){
+    switch (str[i]){
+      case 'z':
+      case 'q':
+        scoreCounter += 10;
+        break;
+      case 'j':
+      case 'x':
+        scoreCounter += 8;
+        break;
+      case 'k':
+        scoreCounter += 5;
+        break;
+      case 'f':
+      case 'h':
+      case 'v':
+      case 'w':
+      case 'y':
+        scoreCounter += 4;
+        break;
+      case 'b':
+      case 'c':
+      case 'm':
+      case 'p':
+        scoreCounter += 3;
+        break;
+      case 'd':
+      case 'g':
+        scoreCounter += 2;
+        break;
+      default:
+      scoreCounter += 1;
+    }
+  }
+  return scoreCounter;
 };
