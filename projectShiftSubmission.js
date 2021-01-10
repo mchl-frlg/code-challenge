@@ -70,9 +70,10 @@ const removeParenth = function(str) {
 };
 
 const scoreScrabble = function(str) {
+  lowerCase = str.toLowerCase();
   scoreCounter= 0;
-  for (let i = 0; i < str.length; i++){
-    switch (str[i]){
+  for (let i = 0; i < lowerCase.length; i++){
+    switch (lowerCase[i]){
       case 'z':
       case 'q':
         scoreCounter += 10;
