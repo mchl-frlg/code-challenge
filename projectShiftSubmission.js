@@ -57,7 +57,16 @@ const largestPair = function(array) {
 };
 
 const removeParenth = function(str) {
-  // your code here - don't forget to return a string!
+  parenthIndices = [];
+  for (let i = 0; i < str.length; i++){
+    if ((str[i] === '(') || (str[i] === ')')){
+      parenthIndices.push(i);
+    }
+  }
+  parenthIndices[1] += 1;
+  partOne = str.slice(0, parenthIndices[0]);
+  partTwo = str.slice(parenthIndices[1]);
+  return partOne + partTwo;
 };
 
 const scoreScrabble = function(str) {
